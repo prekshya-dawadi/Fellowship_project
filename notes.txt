@@ -1,3 +1,5 @@
 template engines used for dynamic pages.
 jade, ejs: template engines
 cdn: cloud dense network, linked directly from the internet
+
+... => spread operator: adds two arrays together

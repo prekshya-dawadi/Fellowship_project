@@ -9,6 +9,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// Database
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/todoDB')
+        .then(()=> console.log('connected to db'))
+        .catch((e) => console.log('error', e));
+// Schema: blue-print for the collection(table) of the database.
+// Schemaless => mongoose, but we use Schema to prevent confusion.
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
